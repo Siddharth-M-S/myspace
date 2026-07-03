@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { getEntryById } from '@/lib/entries'
 import { getSectionById } from '@/lib/sections'
 import { EntryViewer } from '@/components/entry/EntryViewer'
+import { DeleteEntryButton } from '@/components/entry/DeleteEntryButton'
 import Link from 'next/link'
 import { ChevronLeft, Pencil, Tag, Clock, FolderOpen, Share2 } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
@@ -43,6 +44,7 @@ export default async function EntryPage({ params }: { params: { id: string } }) 
           <Pencil className="w-4 h-4" />
           Edit
         </Link>
+        <DeleteEntryButton entryId={params.id} sectionId={entry.sectionId} />
       </div>
 
       {/* Entry header */}
