@@ -9,7 +9,8 @@ export default auth((req) => {
     nextUrl.pathname.startsWith('/login') ||
     nextUrl.pathname.startsWith('/shared/') ||
     nextUrl.pathname.startsWith('/api/auth') ||
-    nextUrl.pathname.startsWith('/api/share')
+    nextUrl.pathname.startsWith('/api/share') ||
+    nextUrl.pathname.startsWith('/api/setup')
 
   if (!isLoggedIn && !isPublicPath) {
     return NextResponse.redirect(new URL('/login', nextUrl))
