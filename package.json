@@ -29,7 +29,10 @@
     "remark-gfm": "^4.0.1",
     "swr": "^2.4.2",
     "tailwind-merge": "^3.6.0",
-    "uuid": "^14.0.1"
+    "uuid": "^14.0.1",
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.8.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.12",
