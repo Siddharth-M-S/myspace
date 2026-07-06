@@ -53,6 +53,7 @@ export async function createEntry(data: {
 
   const entry: Entry = {
     id,
+    type: 'note',
     title: data.title || `Note — ${new Date().toLocaleDateString()}`,
     content: data.content,
     tags: data.tags,
