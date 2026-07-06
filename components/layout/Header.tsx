@@ -43,13 +43,14 @@ export function Header({ username, role }: HeaderProps) {
           <span className="hidden sm:inline">New Entry</span>
         </Link>
 
-        {/* Import */}
+        {/* Upload Files */}
         <Link
-          href="/import"
-          title="Import .md file"
-          className="p-2 rounded-lg text-gray-400 hover:text-gray-200 hover:bg-white/10 transition-colors"
+          href="/upload"
+          title="Upload files (PDF, Word, Excel...)"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-sm transition-colors"
         >
           <Upload className="w-4 h-4" />
+          <span className="hidden sm:inline">Upload</span>
         </Link>
 
         {/* User menu */}

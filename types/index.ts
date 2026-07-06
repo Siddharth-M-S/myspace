@@ -19,8 +19,11 @@ export interface Section {
   createdAt: string
 }
 
+export type EntryType = 'note' | 'file'
+
 export interface Entry {
   id: string
+  type: EntryType
   title: string
   content: string
   tags: string[]
@@ -30,6 +33,12 @@ export interface Entry {
   isVault: boolean
   createdAt: string
   updatedAt: string
+  // file-specific fields (only when type === 'file')
+  fileUrl?: string
+  filePublicId?: string
+  fileName?: string
+  fileType?: string
+  fileSize?: number
 }
 
 export interface ShareLink {
