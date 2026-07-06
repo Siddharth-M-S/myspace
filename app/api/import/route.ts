@@ -42,7 +42,8 @@ async function extractText(file: File): Promise<{ content: string; tags: string[
   // PDF
   if (ext === 'pdf') {
     try {
-      const pdfParse = (await import('pdf-parse')).default
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const pdfParse = require('pdf-parse')
       const buffer = Buffer.from(await file.arrayBuffer())
       const data = await pdfParse(buffer)
       const content = `## ${cleanTitle(file.name)}\n\n${data.text.trim()}`
